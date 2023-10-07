@@ -1,9 +1,9 @@
 <?php
 
-namespace Phoenix\Cache;
+namespace Phoenix\Cache\Repository;
 
-use Phoenix\Cache\Interfaces\CacheStrategy;
 use Phoenix\Cache\Exceptions\CachedItemNotFoundException;
+use Phoenix\Cache\Interfaces\CacheStrategy;
 
 class Cache
 {
@@ -12,6 +12,15 @@ class Cache
     public function __construct(CacheStrategy $strategy)
     {
         $this->strategy = $strategy;
+    }
+
+    /**
+     * @param CacheStrategy $strategy
+     * @return static
+     */
+    public static function use(CacheStrategy $strategy)
+    {
+        return new self($strategy);
     }
 
     /**
