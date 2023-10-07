@@ -8,12 +8,10 @@ use Phoenix\Cache\Exceptions\CachedItemNotFoundException;
 class Cache
 {
     protected CacheStrategy $strategy;
-    protected ?int $defaultTTL;
 
-    public function __construct(CacheStrategy $strategy, ?int $defaultTTL = null)
+    public function __construct(CacheStrategy $strategy)
     {
         $this->strategy = $strategy;
-        $this->defaultTTL = $defaultTTL;
     }
 
     /**
@@ -31,7 +29,7 @@ class Cache
             $result = $this->strategy->get($key);
         } catch (CachedItemNotFoundException $e) {
             $result = $setter();
-            $this->strategy->set($key, $result, $ttl ?? $this->defaultTTL);
+            $this->strategy->set($key, $result, $ttl);
         }
 
         return $result;
