@@ -1,35 +1,30 @@
 <?php
 
-namespace Phoenix\Cache\Interfaces;
+namespace Phoenix\Cache\Traits;
+
+namespace Phoenix\Cache\Traits;
 
 use Phoenix\Cache\Exceptions\CachedItemNotFoundException;
 
-interface CacheStrategy
+trait CanLoadCacheTrait
 {
     /**
      * Get an item from the cache.
-     * 
+     *
      * @param string $key
      * @return mixed
      * @throws CachedItemNotFoundException
      */
-    public function get(string $key);
+    abstract public function get(string $key);
 
     /**
      * Set the item to the cache
-     * 
+     *
      * @param string $key the cache key
      * @param mixed $value The cache value
      * @param ?int $ttl The duration. If null, no expiration.
      */
-    public function set(string $key, $value, ?int $ttl): void;
-
-    /**
-     * Delete an item from the cache.
-     * 
-     * @param string $key
-     */
-    public function delete(string $key): void;
+    abstract public function set(string $key, $value, ?int $ttl): void;
 
     /**
      * Fetches an item from the cache or loads it using a callable.
@@ -40,5 +35,15 @@ interface CacheStrategy
      *
      * @return mixed
      */
-    public function load(string $key, callable $setter, ?int $ttl = null);
+    public function load(string $key, callable $setter, ?int $ttl = null)
+    {
+        try {
+            $result = $this->get($key);
+        } catch (CachedItemNotFoundException $e) {
+            $result = $setter();
+            $this->set($key, $result, $ttl);
+        }
+
+        return $result;
+    }
 }
