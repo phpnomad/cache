@@ -41,4 +41,12 @@ interface CacheStrategy
      * @return mixed
      */
     public function load(string $key, callable $setter, ?int $ttl = null);
+
+    /**
+     * Returns true if the specified cache key exists.
+     *
+     * @param string $key
+     * @return bool
+     */
+    public function exists(string $key): bool;
 }

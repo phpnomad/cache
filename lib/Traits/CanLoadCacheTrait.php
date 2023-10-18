@@ -2,8 +2,6 @@
 
 namespace Phoenix\Cache\Traits;
 
-namespace Phoenix\Cache\Traits;
-
 use Phoenix\Cache\Exceptions\CachedItemNotFoundException;
 
 trait CanLoadCacheTrait
