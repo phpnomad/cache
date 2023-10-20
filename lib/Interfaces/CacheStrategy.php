@@ -49,4 +49,11 @@ interface CacheStrategy
      * @return bool
      */
     public function exists(string $key): bool;
+
+    /**
+     * Completely clears the cache.
+     *
+     * @return void
+     */
+    public function clear(): void;
 }
