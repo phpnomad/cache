@@ -32,17 +32,6 @@ interface CacheStrategy
     public function delete(string $key): void;
 
     /**
-     * Fetches an item from the cache or loads it using a callable.
-     *
-     * @param string $key The cache key
-     * @param callable $setter The setter that sets the cache value
-     * @param ?int $ttl Time to live for the cached item, null for default TTL
-     *
-     * @return mixed
-     */
-    public function load(string $key, callable $setter, ?int $ttl = null);
-
-    /**
      * Returns true if the specified cache key exists.
      *
      * @param string $key
