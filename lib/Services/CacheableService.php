@@ -6,6 +6,7 @@ use Phoenix\Cache\Events\CacheMissed;
 use Phoenix\Cache\Interfaces\CachePolicy;
 use Phoenix\Cache\Interfaces\CacheStrategy;
 use Phoenix\Events\Interfaces\EventStrategy;
+use Phoenix\Utils\Helpers\Arr;
 
 class CacheableService
 {
@@ -31,7 +32,7 @@ class CacheableService
 
             $this->eventStrategy->broadcast(new CacheMissed($operation, $context, $result));
 
-            $this->cacheStrategy->set($key, $result, $this->cachePolicy->getTtl($operation, $context));
+            $this->cacheStrategy->set($key, $result, $this->cachePolicy->getTtl($context));
 
             return $result;
         }
@@ -52,6 +53,16 @@ class CacheableService
             $value,
             $this->cachePolicy->getTtl($context)
         );
+    }
+
+    /**
+     * Delete an item from the cache.
+     * @param array $context
+     * @return void
+     */
+    public function delete(array $context): void
+    {
+        $this->cacheStrategy->delete($this->cachePolicy->getCacheKey($context));
     }
 
     /**
