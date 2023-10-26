@@ -6,7 +6,6 @@ use Phoenix\Cache\Events\CacheMissed;
 use Phoenix\Cache\Interfaces\CachePolicy;
 use Phoenix\Cache\Interfaces\CacheStrategy;
 use Phoenix\Events\Interfaces\EventStrategy;
-use Phoenix\Utils\Helpers\Arr;
 
 class CacheableService
 {
