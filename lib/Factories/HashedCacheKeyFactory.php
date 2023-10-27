@@ -23,10 +23,10 @@ class HashedCacheKeyFactory implements HasCacheKey
      * @param array $context
      * @return string
      */
-    public function getCacheKey(array $context = []): string
+    public function getCacheKey(array $context): string
     {
         try {
-            return Str::createHash([$this->cacheKeyPrefixProvider->getCacheKeyPrefix(), $context]);
+            return $this->cacheKeyPrefixProvider->getCacheKeyPrefix() . '_' . Str::createHash($context);
         } catch (\ReflectionException $e) {
             $this->logger->logException($e);
         }

@@ -10,5 +10,5 @@ interface HasCacheKey
      * @param array $context Additional context information, if needed.
      * @return string The cache key.
      */
-    public function getCacheKey(array $context = []): string;
+    public function getCacheKey(array $context): string;
 }
