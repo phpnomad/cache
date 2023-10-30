@@ -1,8 +1,8 @@
 <?php
 
-namespace Phoenix\Cache\Events;
+namespace PHPNomad\Cache\Events;
 
-use Phoenix\Events\Interfaces\Event;
+use PHPNomad\Events\Interfaces\Event;
 
 class CacheMissed implements Event
 {

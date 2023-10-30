@@ -1,6 +1,6 @@
 <?php
 
-namespace Phoenix\Cache\Traits;
+namespace PHPNomad\Cache\Traits;
 
 /**
  * Makes it possible to set up a basic caching mechanism localized to the instance.

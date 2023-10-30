@@ -1,11 +1,11 @@
 <?php
 
-namespace Phoenix\Cache\Factories;
+namespace PHPNomad\Cache\Factories;
 
-use Phoenix\Cache\Interfaces\HasCacheKey;
-use Phoenix\Cache\Interfaces\HasCacheKeyPrefix;
-use Phoenix\Logger\Interfaces\LoggerStrategy;
-use Phoenix\Utils\Helpers\Str;
+use PHPNomad\Cache\Interfaces\HasCacheKey;
+use PHPNomad\Cache\Interfaces\HasCacheKeyPrefix;
+use PHPNomad\Logger\Interfaces\LoggerStrategy;
+use PHPNomad\Utils\Helpers\Str;
 
 class HashedCacheKeyFactory implements HasCacheKey
 {

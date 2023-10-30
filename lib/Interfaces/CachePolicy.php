@@ -1,8 +1,8 @@
 <?php
 
-namespace Phoenix\Cache\Interfaces;
+namespace PHPNomad\Cache\Interfaces;
 
-use Phoenix\Cache\Enums\Operation;
+use PHPNomad\Cache\Enums\Operation;
 
 interface CachePolicy extends HasCacheKey
 {

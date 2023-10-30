@@ -1,8 +1,8 @@
 <?php
 
-namespace Phoenix\Cache\Enums;
+namespace PHPNomad\Cache\Enums;
 
-use Phoenix\Enum\Traits\Enum;
+use PHPNomad\Enum\Traits\Enum;
 
 class Operation
 {

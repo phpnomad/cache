@@ -1,11 +1,11 @@
 <?php
 
-namespace Phoenix\Cache\Services;
+namespace PHPNomad\Cache\Services;
 
-use Phoenix\Cache\Events\CacheMissed;
-use Phoenix\Cache\Interfaces\CachePolicy;
-use Phoenix\Cache\Interfaces\CacheStrategy;
-use Phoenix\Events\Interfaces\EventStrategy;
+use PHPNomad\Cache\Events\CacheMissed;
+use PHPNomad\Cache\Interfaces\CachePolicy;
+use PHPNomad\Cache\Interfaces\CacheStrategy;
+use PHPNomad\Events\Interfaces\EventStrategy;
 
 class CacheableService
 {

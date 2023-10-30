@@ -1,8 +1,8 @@
 <?php
 
-namespace Phoenix\Cache\Traits;
+namespace PHPNomad\Cache\Traits;
 
-use Phoenix\Cache\Exceptions\CachedItemNotFoundException;
+use PHPNomad\Cache\Exceptions\CachedItemNotFoundException;
 
 trait WithExistsCheck
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Phoenix\Cache\Interfaces;
+namespace PHPNomad\Cache\Interfaces;
 
-use Phoenix\Cache\Exceptions\CachedItemNotFoundException;
+use PHPNomad\Cache\Exceptions\CachedItemNotFoundException;
 
 interface CacheStrategy
 {

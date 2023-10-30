@@ -1,6 +1,6 @@
 <?php
 
-namespace Phoenix\Cache\Interfaces;
+namespace PHPNomad\Cache\Interfaces;
 
 interface HasCacheKeyPrefix
 {
