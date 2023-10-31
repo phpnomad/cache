@@ -3,6 +3,7 @@
 namespace PHPNomad\Cache\Services;
 
 use PHPNomad\Cache\Events\CacheMissed;
+use PHPNomad\Cache\Exceptions\CachedItemNotFoundException;
 use PHPNomad\Cache\Interfaces\CachePolicy;
 use PHPNomad\Cache\Interfaces\CacheStrategy;
 use PHPNomad\Events\Interfaces\EventStrategy;
@@ -35,6 +36,18 @@ class CacheableService
 
             return $result;
         }
+    }
+
+    /**
+     * Gets the cache key using the provided context.
+     *
+     * @param array $context
+     * @return mixed
+     * @throws CachedItemNotFoundException
+     */
+    public function get(array $context)
+    {
+        return $this->cacheStrategy->get($this->cachePolicy->getCacheKey($context));
     }
 
     /**
