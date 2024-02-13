@@ -11,6 +11,10 @@
     "repositories": [
         {
             "type": "vcs",
+            "url": "git@github.com:phpnomad/auth.git"
+        },
+        {
+            "type": "vcs",
             "url": "git@github.com:phpnomad/tests.git"
         },
         {
@@ -43,6 +47,7 @@
         }
     ],
     "require": {
+        "phpnomad/auth": "dev-main",
         "phpnomad/logger": "dev-main",
         "phpnomad/utils": "dev-main",
         "phpnomad/enum-polyfill": "dev-main"
