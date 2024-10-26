@@ -1,5 +1,3 @@
-<?php
-
 namespace PHPNomad\Cache\Factories;
 
 use PHPNomad\Cache\Interfaces\HasCacheKey;
@@ -10,6 +8,7 @@ use PHPNomad\Utils\Helpers\Str;
 class HashedCacheKeyFactory implements HasCacheKey
 {
     protected HasCacheKeyPrefix $cacheKeyPrefixProvider;
+    protected LoggerStrategy $logger;
 
     public function __construct(HasCacheKeyPrefix $cacheKeyPrefixProvider, LoggerStrategy $logger)
     {
@@ -29,6 +28,7 @@ class HashedCacheKeyFactory implements HasCacheKey
             return $this->cacheKeyPrefixProvider->getCacheKeyPrefix() . '_' . Str::createHash($context);
         } catch (\ReflectionException $e) {
             $this->logger->logException($e);
+            return '';
         }
     }
 }
