@@ -1,3 +1,4 @@
+<?php
 namespace PHPNomad\Cache\Factories;
 
 use PHPNomad\Cache\Interfaces\HasCacheKey;
