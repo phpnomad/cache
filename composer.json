@@ -25,7 +25,6 @@
         }
     ],
     "require": {
-        "phpnomad/auth": "^1.0",
         "phpnomad/logger": "^1.0",
         "phpnomad/utils": "^1.0",
         "phpnomad/enum-polyfill": "^1.0"
