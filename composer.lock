@@ -51,23 +51,23 @@
         },
         {
             "name": "phpnomad/logger",
-            "version": "1.0.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpnomad/logger.git",
-                "reference": "241e8e4caef8aceb230813df15f50857ff7d62d2"
+                "reference": "5f228e66d663dbb43fa2f77fffded63c85ee7faf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpnomad/logger/zipball/241e8e4caef8aceb230813df15f50857ff7d62d2",
-                "reference": "241e8e4caef8aceb230813df15f50857ff7d62d2",
+                "url": "https://api.github.com/repos/phpnomad/logger/zipball/5f228e66d663dbb43fa2f77fffded63c85ee7faf",
+                "reference": "5f228e66d663dbb43fa2f77fffded63c85ee7faf",
                 "shasum": ""
             },
             "require-dev": {
-                "phpnomad/di": "^1.0",
+                "phpnomad/di": "^2.0",
                 "phpnomad/facade": "^1.0",
                 "phpnomad/singleton": "^1.0",
-                "phpnomad/tests": "^0.1.0"
+                "phpnomad/tests": "^0.1.0 || ^0.3.0"
             },
             "type": "library",
             "autoload": {
@@ -88,9 +88,9 @@
             "homepage": "https://github.com/phpnomad/core",
             "support": {
                 "issues": "https://github.com/phpnomad/logger/issues",
-                "source": "https://github.com/phpnomad/logger/tree/1.0.0"
+                "source": "https://github.com/phpnomad/logger/tree/1.2.0"
             },
-            "time": "2024-12-18T16:20:35+00:00"
+            "time": "2026-03-31T15:22:52+00:00"
         },
         {
             "name": "phpnomad/singleton",
@@ -4812,5 +4812,5 @@
     "prefer-lowest": false,
     "platform": {},
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }
